@@ -1,0 +1,39 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<ion-content >
+    <img src="../../assets/imgs/login2.png"/>
+    <ion-list class="a">
+        <ion-item  style="background:transparent;">
+            <ion-label><ion-icon name="md-person" item-start ></ion-icon></ion-label>
+            <ion-input type="tel" placeholder="手机号/邮箱" (blur)="tel($event)"></ion-input>
+        </ion-item>
+        <ion-item  style="background:transparent;">
+            <ion-label><ion-icon name="md-lock" item-start ></ion-icon></ion-label>
+            <ion-input type="password" placeholder="密码" (blur)="pw($event)"></ion-input>
+        </ion-item>
+    </ion-list>
+    <button ion-button block color="yel" id="a" >登录</button>
+    <div class="b">
+        ————————————— or —————————————
+    </div>
+    <div class="c">
+        <span><img src="../../assets/imgs/login4.png"></span>
+        <span><img src="../../assets/imgs/login5.png"></span>
+        <span class="c1"><img src="../../assets/imgs/login6.png"></span>
+    </div>
+    <ion-footer no-border>
+        <span (click)="gopage()">没有账号？立即注册</span>
+        <span class="d">忘记密码？</span>
+    </ion-footer>
+</ion-content>
+<script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+<script>
+
+
+</script>

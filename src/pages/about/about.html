@@ -1,0 +1,55 @@
+
+<ion-content padding>
+  <div class="input">
+      <ion-searchbar [(ngModel)]="myInput" [showCancelButton]="shouldShowCancel" (ionInput)="onInput($event)"
+      (ionCancel)="onCancel($event)" placeholder="双12特惠好物超低价" (click)="Search()">
+      </ion-searchbar>
+  </div>
+      <img src="../../assets/imgs/shop1.png"/>
+      <ul class="navList">
+          <li *ngFor="let item of arr;let idx=index;" (click)="isClick(idx)" [class.first]="isActive==idx">{{this.item}}</li>
+     </ul>
+     <div [ngSwitch]="isActive">   <!--控制下方内容切换-->
+      <div *ngSwitchCase="0">
+        <p>—— 沙发 —— <ion-icon name="md-funnel"></ion-icon></p>
+        <ul class="goods">
+            <li >
+                <img src="../../assets/imgs/shop2.png" alt="">
+            </li>
+            <li>
+                <img src="../../assets/imgs/shop3.png" alt="">
+            </li>
+            <li >
+                <img src="../../assets/imgs/shop4.png" alt="">
+                <p>罗得蒙简约植绒布艺沙发 <span>RMB 6500</span></p>
+            </li>
+            <li>
+                <img src="../../assets/imgs/shop5.png" alt="">
+            </li>
+        </ul>
+        <p class="p1">查看全部商品>></p>
+        <p>—— 电视柜 —— <ion-icon name="md-funnel"></ion-icon></p>
+        <ul class="goods">
+            <li >
+                <img src="../../assets/imgs/shop2.png" alt="">
+            </li>
+            <li>
+                <img src="../../assets/imgs/shop3.png" alt="">
+            </li>
+            <li >
+                <img src="../../assets/imgs/shop4.png" alt="">
+                <p>罗得蒙简约植绒布艺沙发 <span>RMB 6500</span></p>
+            </li>
+            <li>
+                <img src="../../assets/imgs/shop5.png" alt="">
+            </li>
+        </ul>
+        <p class="p1">查看全部商品>></p>
+      </div>
+      <div *ngSwitchCase="1">
+      </div>
+      <div *ngSwitchCase="2"></div>
+      <div *ngSwitchCase="3"></div>
+      <div *ngSwitchCase="4"></div>
+     </div>
+</ion-content>
